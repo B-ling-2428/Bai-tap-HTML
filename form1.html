@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Đăng ký khóa học</h1>
+        <form>
+            Họ đệm :<input type="text" name="fullname"><br><br>
+            Tên :<input type="text" name="fullname"><br><br>
+            Email :<input type="email" name="email"><br><br>
+            Điện thoại : <input type="tel" name="phone"><br><br>
+            Giới tính* :
+            <input type="radio" name="gioitinh" value="Nam" >Nam 
+            <input type="radio" name="gioitinh" value="Nữ" >Nữ <br><br>
+            Tuổi : 
+            <input type="number" id="age" min="18" max="99"><br><br>
+            Chọn khóa học :
+            <select name="course">
+                <option value="PHP">PHP</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+            </select><br><br>
+            <!--Cơ sở học-->
+            <label for="city">Cơ sở học:</label>
+                <input list="cities" name="city" id="city">
+                <datalist id="cities">
+                    <option value="Hà Nội">
+                    <option value="Thành phố Hồ Chí Minh">
+                    <option value="Đà Nẵng">
+                    <option value="Hải Phòng">
+                    <option value="Cần Thơ">
+                </datalist>
+            <br><br>
+            Chọn ca học :
+            <input type="checkbox" name="cahoc" value="Sáng" >Sáng
+            <input type="checkbox" name="cahoc" value="Chiều" >Chiều
+            <input type="checkbox" name="cahoc" value="Tối" >Tối <br><br>
+            Hình thức học :
+            <input type="radio" name="hinhthuc" value="Online" >Online
+            <input type="radio" name="hinhthuc" value="Offline" >Offline <br><br>
+            Ngày bắt đầu :
+            <input type="date" name="start_date"><br><br>
+            Các yêu cầu khác : <br>
+            <textarea name="note" rows="4" cols="30"></textarea>
+            <br><br>
+            <input type="submit" value="Đăng ký"><br><br>
+            <input type="reset" value="Làm lại"><br><br>
+            <input type="password" name="password" id="password" placeholder="Nhập mật khẩu">
+        </form>
+    </div>
+    <br>
+    <select name="cars" size="3" style="width: 90px;" multiple>
+        <!--Multiple cho phép người dùng chọn nhiều hơn 1 giá trị-->
+        <!--selected xác định một giá trị được chọn sẵn,có thể thay đổi-->
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+        <option value="bmw" selected>BMW</option>
+    </select>
+    <br>
+    <label for="course-select">Chọn khóa học:</label>
+        <select id="course-select">
+            <optgroup label="Khóa học lập trình">
+                <option>Python</option>
+                <option>Java</option>
+                <option>JavaScript</option>
+            </optgroup>
+            <optgroup label="Cơ sở dữ liệu">
+                <option>MySQL</option>
+                <option>SQL Server</option>
+                <option>MongoDB</option>
+            </optgroup>
+        </select>
+    <br>
+    CHỌN FILE : <input type="file" name="file" id="file">
+    <input type="button" value="Upload" onclick="uploadFile()" accesskey="b"><br><br>
+    <label for="file">Đang tải file:</label>
+    <progress id="file" value="50" max="100"></progress><br><br>
+    <!--Sử dụng output-->
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)" >
+        <input type="number" id="a" name="a" value="0"> +
+        <input type="number" id="b" name="b" value="0"> =
+        <output name="x"></output>
+    </form>
+    <br>
+    First name: <input type="text" id="fname" name="fname" maxlength="6" required><br><br>
+
+</body>
+</html>
