@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form ung tuyen</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+</head>
+<style>
+    fieldset {
+        border: 1px solid #000;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    input {
+        background: #ddd;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        margin-top: 5px;
+    }
+    .form-m{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    form{
+        background-color: #f1f1f1; ;
+    }
+    input[type=checkbox]{
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div class="form-m">
+        <form action="/submit.php" autocomplete="off">
+            <fieldset style="width: 80px; height: 150px;">
+                <legend>Thông tin cá nhân:</legend>
+                Họ và tên: <input type="text" name="fullname" placeholder="Nhập họ và tên"><br>
+                Email: <input type="email" name="email" placeholder="Nhập email"><br>
+                Số điện thoại: <input type="tel" name="phone"><br>
+                Đính kèm CV: <input type="file" name="cv"><br>
+            </fieldset>
+            <form action="https://www.w3schools.com/action_page.php" target="_blank" method="post" autocomplete="off">
+                <fieldset style="width: 255px; height: 300px;">
+                    <legend>Vị trí ứng tuyển:</legend>
+                    Vị trí: <select name="position">
+                        <option value="dev">Lập trình viên</option>
+                        <option value="tester">Tester</option>
+                        <option value="ba">Business Analyst</option>
+                    </select><br>
+                    <!-- textarea:Thẻ ghi chú-->
+                    Kinh nghiệm: <br> <textarea name="experience" rows="4" cols="15"></textarea><br>
+                    Kỹ năng:<br>
+                    <input type="checkbox" name="skill"> HTML<br>
+                    <input type="checkbox" name="skill"> CSS<br>
+                    <input type="checkbox" name="skill"> JavaScript<br>
+                    Giới tính: <br> <input type="radio" name="gioitinh" value="nam"> Nam<br>
+                    <input type="radio" name="gioitinh" value="nu"> Nữ<br>
+                    <input type="radio" name="gioitinh" value="khac"> Khác<br>
+                    <input type="submit" value="Gửi">
+                </fieldset>
+            </form>
+        </form>
+    </div>
+</body>
+
+</html>

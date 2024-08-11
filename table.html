@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: auto;
+            border-collapse:separate;
+        }
+        th, td {
+            border: 1px solid rgb(125, 40, 40);
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <!--ý nghĩa các thẻ:
+        <table>: tạo bảng
+        <thead>: tạo phần đầu bảng
+            <tr>: tạo hàng
+            <th>: tạo cột
+            <td>: xđ dữ liệu của ô
+        <tbody>: tạo phần thân bảng
+            <rowspan>: thuộc tính giúp cột trải dài qua nhiều hàng
+            <colspan>: thuộc tính giúp hàng trải dài qua nhiều cột
+    -->
+    <table>
+        <thead>
+            <tr>
+                <th>Hàng 1 cột 1</th>
+                <th>Hàng 1 cột 2</th>
+                <th>Hàng 1 cột 3</th>
+                <th>Hàng 1 cột 4</th>
+                <th>Hàng 1 cột 5</th>
+                <th>Hàng 1 cột 6</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4">Hàng 2 cột 1</td>
+                <td rowspan="2">Hàng 2 cột 2</td>
+                <td colspan="2" rowspan="2">Hàng 2 cột 3</td>
+                <td>Hàng 2 cột 4</td>
+                <td>Hàng 2 cột 5</td>
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="2">Hàng 3 cột 2</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Hàng 4 cột 2</td>
+                <td colspan="2">Hàng 4 cột 3</td>   
+            </tr>
+            <tr>    
+                <td colspan="2">Hàng 5 cột 2</td>
+                <td>Hàng 5 cột 3</td>
+                <td>Hàng 5 cột 4</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
